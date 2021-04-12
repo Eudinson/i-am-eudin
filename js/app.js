@@ -111,11 +111,11 @@ const webLinks = [
   "https://eudinson.github.io/Bible-Quiz-Game/",
 ];
 
-
+const caseString = '<span class="case">Case Study</span> - ';
 let count = webTitles.length;
 
 projectTitle.innerText = webTitles[0];
-caseStudy.innerHTML = '<span class="case">Case Study</span> - ' + caseStudies[0];
+caseStudy.innerHTML = caseString + caseStudies[0];
 projectImage.src = imgs[0];
 projectLink.innerText = "visit website >>";
 projectLink.href = webLinks[0];
@@ -129,7 +129,7 @@ const previous = () => {
   }
 
   projectTitle.innerText = webTitles[count];
-  caseStudy.innerHTML = '<span class="case">Case Study</span> - '+ caseStudies[count];
+  caseStudy.innerHTML = caseString + caseStudies[count];
   projectImage.src = imgs[count];
   projectLink.href = webLinks[count];
 
@@ -151,7 +151,7 @@ const next = () => {
     count = 0;
   }
   projectTitle.innerText = webTitles[count];
-  caseStudy.innerHTML = '<span class="case">Case Study</span> - '+ caseStudies[count];
+  caseStudy.innerHTML = caseString + caseStudies[count];
   projectImage.src = imgs[count];
   projectLink.href = webLinks[count];
 
@@ -175,9 +175,50 @@ btnNext.innerText = ">";
 
 
 
-
 const burger = document.querySelector('.burger-container');
 const navContainer = document.querySelector('.nav-container');
+
+
+// for navigation background change
+
+navs.forEach(menu => {
+  menu.addEventListener('click', (e) => {
+
+    burger.addEventListener('transitionend', () => {
+
+      switch (e.target.innerText) {
+        case "about":
+          navContainer.classList.remove('bg-default');
+          navContainer.classList.add('bg-about');
+          navContainer.classList.remove('bg-skills');
+          navContainer.classList.remove('bg-projects');
+          navContainer.classList.remove('bg-contact');
+          break;
+        case "skills":
+          navContainer.classList.remove('bg-default');
+          navContainer.classList.add('bg-skills');
+          navContainer.classList.remove('bg-about');
+          navContainer.classList.remove('bg-projects');
+          navContainer.classList.remove('bg-contact');
+          break;
+        case "projects":
+          navContainer.classList.remove('bg-default');
+          navContainer.classList.add('bg-projects');
+          navContainer.classList.remove('bg-about');
+          navContainer.classList.remove('bg-skills');
+          navContainer.classList.remove('bg-contact');
+          break;
+        case "contact":
+          navContainer.classList.remove('bg-default');
+          navContainer.classList.add('bg-contact');
+          navContainer.classList.remove('bg-projects');
+          navContainer.classList.remove('bg-about');
+          navContainer.classList.remove('bg-skills');
+          break;
+      }
+    })
+  })
+})
 
 const animateNav = () => {
   burger.classList.toggle('burger-rotate');
@@ -189,6 +230,7 @@ const animateNav = () => {
     })
   })
 }
+
 
 burger.addEventListener('click', animateNav);
 

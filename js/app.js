@@ -75,7 +75,8 @@ const webTitles = [
   "Mittal Facility",
   "Agatha Chic",
   "Mittal Contracting",
-  "Bible Quick Search"
+  "Bible Quick Search",
+  "Bible Quiz Game"
 ];
 
 const caseStudies = [
@@ -86,6 +87,7 @@ const caseStudies = [
   "Build a simple ecommerce website using wordpress woocommerce.",
   "Redesign the old website using plain html, css, js, bootstrap, jquery and make it responsive.",
   "Build an app where a user can search quickly a specific passage from the Bible.",
+  "Build an app using c# winform. Bible quiz game for fun, testing, and learning."
 ];
 
 const imgs = [];
@@ -96,6 +98,7 @@ imgs[3] = "imgs/projects/mittal facility.jpg";
 imgs[4] = "imgs/projects/agatha chic.jpg";
 imgs[5] = "imgs/projects/mittal contracting.jpg";
 imgs[6] = "imgs/projects/bible quick search.jpg";
+imgs[6] = "imgs/projects/Bible-Quiz-Game.png";
 
 const webLinks = [
   "https://corner2corner.ae/",
@@ -105,6 +108,7 @@ const webLinks = [
   "https://agathachic.com/",
   "https://www.mittalconstruction.com/",
   "https://eudinson.github.io/quick-search-bible/",
+  "https://eudinson.github.io/Bible-Quiz-Game/",
 ];
 
 

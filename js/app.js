@@ -171,6 +171,9 @@ btnNext.innerText = ">";
 
 
 
+// Mobile
+
+
 
 
 const burger = document.querySelector('.burger-container');

@@ -45,6 +45,7 @@
     position: relative;
 }
 
+
 .nav::before{
     content: '';
     height: 3px;
@@ -63,6 +64,7 @@
     width: 100%;
 }
 
+
 .section{
     padding-top: 4rem;
     height: 100%;
@@ -72,6 +74,11 @@
     position: fixed;
     width: 100%;
     color: white;
+    top: 0;
+    bottom:0;
+    position:fixed;
+    overflow-y:scroll;
+    overflow-x:hidden;
 }
 
 
@@ -119,6 +126,7 @@ background: linear-gradient(to right, #2B32B2, #1488CC); /* W3C, IE 10+/ Edge, F
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 
 .col-2{
@@ -133,15 +141,15 @@ background: linear-gradient(to right, #2B32B2, #1488CC); /* W3C, IE 10+/ Edge, F
     padding-left: 2rem;
 }
 
-.col::after{
+.section::after{
     opacity: .2;
     content: '';
-    height: 300%;
-    width: 200%;
+    height: 100%;
+    width: 100%;
     background-color: black;  
     clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0 100%);
-    position: absolute;
-    top: -100%;
+    position: fixed;
+    top: 0%;
     z-index: -1;
     left: 40%;
 }
@@ -347,7 +355,29 @@ background: linear-gradient(to right, #2B32B2, #1488CC); /* W3C, IE 10+/ Edge, F
     }
 }
 
-
+.bg-about{
+    background: #000000;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+  
+  .bg-skills{
+    background: #8E0E00;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #1F1C18, #8E0E00);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #1F1C18, #8E0E00); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+  
+  .bg-projects{
+    background: #2c3e50;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #3498db, #2c3e50);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #3498db, #2c3e50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+  
+  .bg-contact{
+    background: #1488CC;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #2B32B2, #1488CC);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #2B32B2, #1488CC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
 
 .burger-container{
     position: fixed;
@@ -422,7 +452,7 @@ background: linear-gradient(to right, #2B32B2, #1488CC); /* W3C, IE 10+/ Edge, F
           font-size: 80%;
       }
       .col{
-          padding-top: 1rem;
+          padding-top: 3rem;
           padding-left: 2rem;
           align-items: flex-start;
       }

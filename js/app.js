@@ -98,7 +98,7 @@ imgs[3] = "imgs/projects/mittal facility.jpg";
 imgs[4] = "imgs/projects/agatha chic.jpg";
 imgs[5] = "imgs/projects/mittal contracting.jpg";
 imgs[6] = "imgs/projects/bible quick search.jpg";
-imgs[6] = "imgs/projects/Bible-Quiz-Game.png";
+imgs[7] = "imgs/projects/Bible-Quiz-Game.png";
 
 const webLinks = [
   "https://corner2corner.ae/",

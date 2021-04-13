@@ -8,6 +8,7 @@ const col2 = document.querySelectorAll('.col-2');
 const logo = document.querySelector(".logo");
 logo.innerText = "< I am eudin />";
 
+logo.addEventListener('click', () => location.reload());
 
 // Mobile
 const burger = document.querySelector('.burger-container');

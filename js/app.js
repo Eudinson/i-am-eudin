@@ -8,6 +8,11 @@ const col2 = document.querySelectorAll('.col-2');
 const logo = document.querySelector(".logo");
 logo.innerText = "< I am eudin />";
 
+
+// Mobile
+const burger = document.querySelector('.burger-container');
+const navContainer = document.querySelector('.nav-container');
+
 let z = 0;
 
 // set the sections default z-index
@@ -33,6 +38,8 @@ sectionTitle[0].addEventListener('animationend', () => {
 // navs interaction with the sections
 navs.forEach(menu => {
   menu.addEventListener('click', (e) => {
+
+
     for (let i = 0; i < navs.length; i++) {
       if (e.target.innerText === sectionTitle[i].innerText) {
         sections[i].style.zIndex = sections.length;
@@ -54,6 +61,47 @@ navs.forEach(menu => {
         col2[i].style.opacity = 0;
       }
     }
+
+
+    // mobile
+
+    burger.addEventListener('transitionend', () => {
+
+      switch (e.target.innerText) {
+        case "about":
+          navContainer.classList.remove('bg-default');
+          navContainer.classList.add('bg-about');
+          navContainer.classList.remove('bg-skills');
+          navContainer.classList.remove('bg-projects');
+          navContainer.classList.remove('bg-contact');
+          break;
+        case "skills":
+          navContainer.classList.remove('bg-default');
+          navContainer.classList.add('bg-skills');
+          navContainer.classList.remove('bg-about');
+          navContainer.classList.remove('bg-projects');
+          navContainer.classList.remove('bg-contact');
+          break;
+        case "projects":
+          navContainer.classList.remove('bg-default');
+          navContainer.classList.add('bg-projects');
+          navContainer.classList.remove('bg-about');
+          navContainer.classList.remove('bg-skills');
+          navContainer.classList.remove('bg-contact');
+          break;
+        case "contact":
+          navContainer.classList.remove('bg-default');
+          navContainer.classList.add('bg-contact');
+          navContainer.classList.remove('bg-projects');
+          navContainer.classList.remove('bg-about');
+          navContainer.classList.remove('bg-skills');
+          break;
+      }
+    })
+
+
+
+    
   })
 })
 
@@ -169,56 +217,6 @@ btnPre.addEventListener('click', previous);
 btnPre.innerText = "<";
 btnNext.innerText = ">";
 
-
-
-// Mobile
-
-
-
-const burger = document.querySelector('.burger-container');
-const navContainer = document.querySelector('.nav-container');
-
-
-// for navigation background change
-
-navs.forEach(menu => {
-  menu.addEventListener('click', (e) => {
-
-    burger.addEventListener('transitionend', () => {
-
-      switch (e.target.innerText) {
-        case "about":
-          navContainer.classList.remove('bg-default');
-          navContainer.classList.add('bg-about');
-          navContainer.classList.remove('bg-skills');
-          navContainer.classList.remove('bg-projects');
-          navContainer.classList.remove('bg-contact');
-          break;
-        case "skills":
-          navContainer.classList.remove('bg-default');
-          navContainer.classList.add('bg-skills');
-          navContainer.classList.remove('bg-about');
-          navContainer.classList.remove('bg-projects');
-          navContainer.classList.remove('bg-contact');
-          break;
-        case "projects":
-          navContainer.classList.remove('bg-default');
-          navContainer.classList.add('bg-projects');
-          navContainer.classList.remove('bg-about');
-          navContainer.classList.remove('bg-skills');
-          navContainer.classList.remove('bg-contact');
-          break;
-        case "contact":
-          navContainer.classList.remove('bg-default');
-          navContainer.classList.add('bg-contact');
-          navContainer.classList.remove('bg-projects');
-          navContainer.classList.remove('bg-about');
-          navContainer.classList.remove('bg-skills');
-          break;
-      }
-    })
-  })
-})
 
 const animateNav = () => {
   burger.classList.toggle('burger-rotate');

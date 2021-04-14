@@ -8,8 +8,8 @@ const col2 = document.querySelectorAll('.col-2');
 const logo = document.querySelector(".logo");
 logo.innerText = "< I am eudin />";
 
-logo.addEventListener('click', () => location.reload());
-
+logo.addEventListener('click', 
+() => location.reload());
 // Mobile
 const burger = document.querySelector('.burger-container');
 const navContainer = document.querySelector('.nav-container');
@@ -42,8 +42,10 @@ navs.forEach(menu => {
 
 
     for (let i = 0; i < navs.length; i++) {
+
       if (e.target.innerText === sectionTitle[i].innerText) {
         sections[i].style.zIndex = sections.length;
+
         sections[i].style.animation = "animate .5s ease-out";
         sections[i].addEventListener("animationend", () => {
           sectionTitle[i].style.animation = "section-title-show .5s ease-out";
@@ -262,9 +264,7 @@ count_particles = document.querySelector('.js-count-particles');
 update = function () {
   stats.begin();
   stats.end();
-  if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
-    count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
-  }
+  
   requestAnimationFrame(update);
 };
 requestAnimationFrame(update);

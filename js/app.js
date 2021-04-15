@@ -101,12 +101,20 @@ navs.forEach(menu => {
           break;
       }
     })
-
-
-
-    
   })
 })
+
+const mediaQuery = window.matchMedia('(min-width: 771px)');
+mediaQuery.addEventListener('change', () => {
+  if(mediaQuery.matches){
+    navContainer.classList.remove('bg-default');
+    navContainer.classList.remove('bg-contact');
+    navContainer.classList.remove('bg-projects');
+    navContainer.classList.remove('bg-about');
+    navContainer.classList.remove('bg-skills');
+  }
+})
+
 
 // Project Slide
 

@@ -189,7 +189,7 @@ background: linear-gradient(to right, #2B32B2, #1488CC); /* W3C, IE 10+/ Edge, F
 }
 
 
-@keyframes slideNext{
+/* @keyframes slideNext{
     0%{
         opacity: 0;
     }
@@ -204,7 +204,7 @@ background: linear-gradient(to right, #2B32B2, #1488CC); /* W3C, IE 10+/ Edge, F
     100%{
         opacity: 1;
     }
-}
+} */
 
 .project-img{
     height: 100%;

@@ -180,7 +180,7 @@ projectLink.innerText = "visit website >>";
 projectLink.href = webLinks[0];
 
 const previous = () => {
-  btnPre.style.pointerEvents = "none";
+  // btnPre.style.pointerEvents = "none";
   count--;
 
   if (count <= -1) {
@@ -192,15 +192,15 @@ const previous = () => {
   projectImage.src = imgs[count];
   projectLink.href = webLinks[count];
 
-  slides.style.animation = "slidePrevious .8s ease-out";
-  slides.addEventListener('animationend', () => {
-    slides.style.animation = "none";
-    btnPre.style.pointerEvents = "all";
-  })
+  // slides.style.animation = "slidePrevious .8s ease-out";
+  // slides.addEventListener('animationend', () => {
+  //   slides.style.animation = "none";
+  //   btnPre.style.pointerEvents = "all";
+  // })
 }
 
 const next = () => {
-  btnNext.style.pointerEvents = "none";
+  // btnNext.style.pointerEvents = "none";
   count++;
   if (projectTitle.innerText === webTitles[0]) {
     count = 1;
@@ -214,11 +214,11 @@ const next = () => {
   projectImage.src = imgs[count];
   projectLink.href = webLinks[count];
 
-  slides.style.animation = "slideNext .8s ease-out";
-  slides.addEventListener('animationend', () => {
-    slides.style.animation = "none";
-    btnNext.style.pointerEvents = "all";
-  })
+  // slides.style.animation = "slideNext .8s ease-out";
+  // slides.addEventListener('animationend', () => {
+  //   slides.style.animation = "none";
+  //   btnNext.style.pointerEvents = "all";
+  // })
 
 }
 
